@@ -43,7 +43,10 @@ public class Workshop {
     public int factorial(int n) {
         // TODO: Implementar el método para calcular el factorial de un número entero.
         // Ejemplo: Si n = 5, el resultado debería ser 120.
-	if(n<0){	
+	if(n>=0){
+		if (n == 0) {
+     			   return 1;
+    			}	
 		for (int i =n-1;i>0;i--){
 		n=n*i;
 		}}
