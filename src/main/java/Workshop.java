@@ -92,7 +92,7 @@ public class Workshop {
     // Método que suma todos los elementos de un arreglo
     public int sumaElementos(int[] arreglo) {
         // TODO: Implementar el método para sumar todos los elementos de un arreglo.
-        int total;
+        int total=0;
         for(int i = 0;i<arreglo.length;i++){
             total=total+arreglo[i];
         }
