@@ -82,7 +82,6 @@ public class Workshop {
 	if (n<0){throw new IllegalArgumentException("El número no puede ser 	negativo");}
 	if(n>0){serie[0]=0;}
 	if(n>1){serie[1]=1;}
-	serie[1]=1;
 	for(int i = 2; i < n; i++){
 		serie[i]=serie[i-1]+serie [i-2];
 	}
