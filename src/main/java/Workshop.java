@@ -80,9 +80,10 @@ public class Workshop {
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
 	int [] serie= new int [n];
 	if (n<0){throw new IllegalArgumentException("El número no puede ser 	negativo");}
-	serie[0]=0;
+	if(n>0){serie[0]=0;}
+	if(n>1){serie[1]=1;}
 	serie[1]=1;
-	for(int i = 0; i < n; i++){
+	for(int i = 2; i < n; i++){
 		serie[i]=serie[i-1]+serie [i-2];
 	}
         // Lanzar IllegalArgumentException si n es negativo.
