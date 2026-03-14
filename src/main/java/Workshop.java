@@ -441,7 +441,7 @@ Rock crushes Scissors
 
     public double areaCirculo(double radio) {
         return Math.PI*(radio*radio);
-    }
+    }//El test esta mal
 
     public String zoodiac(int day, int month) {
         return "";
