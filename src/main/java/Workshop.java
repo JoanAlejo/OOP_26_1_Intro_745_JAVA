@@ -188,7 +188,7 @@ public class Workshop {
         int indice=0;
         for (int i = 0; i < arreglo.length; i++) {
             boolean existe = false;
-            for (int j = 0; j < arreglo.length - 1; j++) {
+            for (int j = 0; j < indice; j++) {
                 if (arreglo[i] == a2[j]) {
                     existe = true;
                 }
@@ -198,8 +198,12 @@ public class Workshop {
                     indice++;
                 }
             }
+        int[] arregloFinal = new int [indice];
+        for (int i = 0; i < indice; i++) {
+            arregloFinal[i]=a2[i];
+        }
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
-        return a2;
+        return arregloFinal;
     }
 
     // Método que combina dos arreglos en uno solo
