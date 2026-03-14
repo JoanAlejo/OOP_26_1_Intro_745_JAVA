@@ -234,7 +234,6 @@ public class Workshop {
             arregloRotado[nuevaPos] = arreglo[i];
         }
 
-        return arregloRotado;
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
         return arregloRotado;
     }
