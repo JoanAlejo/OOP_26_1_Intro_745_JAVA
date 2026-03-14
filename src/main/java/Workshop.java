@@ -444,9 +444,26 @@ Rock crushes Scissors
     }//El test esta mal
 
     public String zoodiac(int day, int month) {
-        return "";
+        if (month < 1 || month > 12) {
+            return "Invalid Date";
+        }
+        int[] diasMes = {31,28,31,30,31,30,31,31,30,31,30,31};//creamos un arreglo con el dia mas grande de cada mes para validar que no se pase
+        if (day < 1 || day > diasMes[month-1]) {
+            return "Invalid Date";
+        }
+        if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) return "Aries";
+        if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) return "Taurus";
+        if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) return "Gemini";
+        if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) return "Cancer";
+        if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) return "Leo";
+        if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) return "Virgo";
+        if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) return "Libra";
+        if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) return "Scorpio";
+        if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) return "Sagittarius";
+        if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) return "Capricorn";
+        if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) return "Aquarius";
+
+        return "Pisces";
     }
-
-
 }
 
