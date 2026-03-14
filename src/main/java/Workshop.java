@@ -267,8 +267,9 @@ public class Workshop {
     // Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
         // TODO: Implementar el método para contar el número de palabras en una cadena.
+        String [] cadenaSeparada = cadena.split("\\s+");//este \\s+ es el que toma uno o mas espacios y ahi separa la cadena
         // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
-        return 0;
+        return cadenaSeparada.length;
     }
 
     // Método que convierte una cadena a mayúsculas
