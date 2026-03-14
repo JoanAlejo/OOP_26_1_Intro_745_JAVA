@@ -323,8 +323,25 @@ public class Workshop {
     // Método que convierte un número en su representación binaria
     public String convertirABinario(int numero) {
         // TODO: Implementar el método para convertir un número en su representación binaria.
+        if (numero == 0) {
+            return "0";
+        }
+        boolean esNegativo = false;
+        if (numero < 0) {
+            esNegativo = true;
+            numero = -numero;
+        }
+        String binario = "";
+        while (numero > 0) {
+            int residuo = numero % 2;
+            binario = residuo + binario;
+            numero = numero / 2;
+        }
+        if (esNegativo) {
+            binario = "-" + binario;
+        }
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
-        return "";
+        return binario;
     }
 
     // Método que convierte un número en su representación hexadecimal
