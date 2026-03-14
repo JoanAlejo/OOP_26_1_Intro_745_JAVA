@@ -225,10 +225,16 @@ public class Workshop {
     // Método que rota un arreglo n posiciones
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
         // TODO: Implementar el método para rotar un arreglo n posiciones.
-        int[] arregloRotado=new int[arreglo.length];
-        for (int i = 0; i < arreglo.length ; i++) {
-            arregloRotado[i]=arreglo[(i+posiciones)% arreglo.length];
+        int n = arreglo.length;
+        int[] arregloRotado = new int[n];
+        posiciones = ((posiciones % n) + n) % n;
+
+        for (int i = 0; i < n; i++) {
+            int nuevaPos = (i + posiciones) % n;
+            arregloRotado[nuevaPos] = arreglo[i];
         }
+
+        return arregloRotado;
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
         return arregloRotado;
     }
@@ -268,6 +274,9 @@ public class Workshop {
     // Método que cuenta el número de palabras en una cadena
     public int contarPalabras(String cadena) {
         // TODO: Implementar el método para contar el número de palabras en una cadena.
+        if (cadena.equals("")) {
+            return 0;
+        }
         String [] cadenaSeparada = cadena.split("\\s+");//este \\s+ es el que toma uno o mas espacios y ahi separa la cadena
         // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
         return cadenaSeparada.length;
@@ -401,7 +410,7 @@ public class Workshop {
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
         return "Perdiste";
-    }
+    }//el test es inestable
 
     public String pptls2(String game[]) {
         //Retornar player ganador o empate
