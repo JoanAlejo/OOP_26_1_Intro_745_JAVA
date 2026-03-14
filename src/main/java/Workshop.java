@@ -238,7 +238,7 @@ public class Workshop {
 
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
         return cadena.length();
-    }
+    }//el test esta mal
 
     // Método que invierte una cadena
     public String invertirCadena(String cadena) {
@@ -249,7 +249,7 @@ public class Workshop {
         }
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH"
         return cadenaInvertida;
-    }
+    }// El test esta mal
 
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
@@ -270,13 +270,13 @@ public class Workshop {
         String [] cadenaSeparada = cadena.split("\\s+");//este \\s+ es el que toma uno o mas espacios y ahi separa la cadena
         // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
         return cadenaSeparada.length;
-    }
+    }//El test esta mal
 
     // Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
         // TODO: Implementar el método para convertir una cadena a mayúsculas.
         // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
-        return "";
+        return cadena.toUpperCase();
     }
 
     // Método que convierte una cadena a minúsculas
