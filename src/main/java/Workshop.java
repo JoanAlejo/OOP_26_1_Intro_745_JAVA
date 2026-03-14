@@ -316,6 +316,7 @@ public class Workshop {
         for (int ele: lista){
             total+=ele;
         }
+        if (lista.size()==0){return 0;}
         return total/lista.size();
     }
 
