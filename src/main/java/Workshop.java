@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 
 public class Workshop {
     public static void main(String[] args) {
@@ -380,11 +381,26 @@ public class Workshop {
         // - Tijera vence a Papel y Lagarto
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
-
+        String [] opciones={"Tijera","Piedra","Papel","Lagarto","Spock"};
+        Random random = new Random();
+        int numero = random.nextInt(5);
+        String eleccionMaquina = opciones[numero];
+        if (eleccionUsuario.equals(eleccionMaquina)) {
+            return "Empate";
+        }
+        if (
+                (eleccionUsuario.equals("Piedra") && (eleccionMaquina.equals("Tijera") || eleccionMaquina.equals("Lagarto"))) ||
+                        (eleccionUsuario.equals("Papel") && (eleccionMaquina.equals("Piedra") || eleccionMaquina.equals("Spock"))) ||
+                        (eleccionUsuario.equals("Tijera") && (eleccionMaquina.equals("Papel") || eleccionMaquina.equals("Lagarto"))) ||
+                        (eleccionUsuario.equals("Lagarto") && (eleccionMaquina.equals("Spock") || eleccionMaquina.equals("Papel"))) ||
+                        (eleccionUsuario.equals("Spock") && (eleccionMaquina.equals("Tijera") || eleccionMaquina.equals("Piedra")))
+        ) {
+            return "Ganaste";
+        }
 
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
-        return "";
+        return "Perdiste";
     }
 
     public String pptls2(String game[]) {
