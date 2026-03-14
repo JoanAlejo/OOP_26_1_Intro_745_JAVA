@@ -188,15 +188,16 @@ public class Workshop {
         int indice=0;
         for (int i = 0; i < arreglo.length; i++) {
             boolean existe = false;
-            for (int j = 0; j < arreglo.length-1; j++) {
-                if(arreglo[i] == a2[j]){
+            for (int j = 0; j < arreglo.length - 1; j++) {
+                if (arreglo[i] == a2[j]) {
                     existe = true;
                 }
-                if(existe == false){
+            }
+                if (existe == false) {
                     a2[indice] = arreglo[i];
                     indice++;
+                }
             }
-        }
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
         return a2;
     }
