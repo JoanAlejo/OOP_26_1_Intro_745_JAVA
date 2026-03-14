@@ -166,8 +166,19 @@ public class Workshop {
     // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
+        for(int i = 0; i < arreglo.length; i++){
+            for (int j = 0; j < arreglo.length-1; j++) {
+                if (arreglo[j+1]<arreglo[j]){
+                    int temporal = arreglo[j];
+                    arreglo[j] = arreglo[j + 1];
+                    arreglo[j + 1] = temporal;
+                }
+
+            }
+
+        }
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
+        return arreglo;
     }
 
     // Método que elimina los duplicados de un arreglo
