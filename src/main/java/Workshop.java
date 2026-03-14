@@ -382,7 +382,7 @@ public class Workshop {
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
         String [] opciones={"Tijera","Piedra","Papel","Lagarto","Spock"};
-        Random random = new Random();
+        Random  random = new Random();
         int numero = random.nextInt(5);
         String eleccionMaquina = opciones[numero];
         if (eleccionUsuario.equals(eleccionMaquina)) {
