@@ -368,7 +368,7 @@ public class WorkshopTest {
                 resultado1.equals("Empate"));
 
         // Test 2: Papel
-        String resultado2 = tester.jugarPiedraPapelTijeraLagartoSpock("Papel");
+        String resultado2 =  tester.jugarPiedraPapelTijeraLagartoSpock("Papel");
         assertTrue(resultado2.equals("Ganaste") ||
                 resultado2.equals("Perdiste") ||
                 resultado2.equals("Empate"));
