@@ -22,7 +22,8 @@ public class WorkshopTest {
     //Test para el area del circulo
     public void testAreaCirculo() {
         assertEquals(Math.PI, tester.areaCirculo(1), 0.001);
-        assertEquals((Math.PI*10), tester.areaCirculo(10), 0.001);;
+       // assertEquals((Math.PI*10), tester.areaCirculo(10), 0.001);; test fallido
+        assertEquals((Math.PI*100), tester.areaCirculo(10), 0.001);; //test corregido
         assertEquals(0, tester.areaCirculo(0), 0.001);
     }
 
@@ -217,11 +218,14 @@ public class WorkshopTest {
     @Test
     public void testContarCaracteres() {
         // Test 1: Contar caracteres en cadena
-        assertEquals(13, tester.contarCaracteres("Hola mundo"));
+        //assertEquals(13, tester.contarCaracteres("Hola mundo")); test fallido
+        assertEquals(10, tester.contarCaracteres("Hola mundo"));
         // Test 2: Contar caracteres en cadena vacía
-        assertEquals(0, tester.contarCaracteres(""));
+        assertEquals(0, tester.contarCaracteres(""));//test corregido
         // Test 3: Contar caracteres en cadena con espacios
-        assertEquals(14, tester.contarCaracteres("Hola   mundo"));
+        //assertEquals(14, tester.contarCaracteres("Hola   mundo")); test fallido
+        assertEquals(12, tester.contarCaracteres("Hola   mundo")); //test corregido
+
     }
 
     // Test para el método invertirCadena
@@ -232,7 +236,8 @@ public class WorkshopTest {
         // Test 2: Invertir cadena vacía
         assertEquals("", tester.invertirCadena(""));
         // Test 3: Invertir cadena con caracteres especiales
-        assertEquals("!@#321", tester.invertirCadena("123@#!"));
+        //assertEquals("!@#321", tester.invertirCadena("123@#!")); test fallido
+        assertEquals("!#@321", tester.invertirCadena("123@#!")); //test corregido
     }
 
     // Test para el método esPalindromo
@@ -255,7 +260,8 @@ public class WorkshopTest {
         // Test 2: Contar palabras en cadena vacía
         assertEquals(0, tester.contarPalabras(""));
         // Test 3: Contar palabras con múltiples espacios
-        assertEquals(4, tester.contarPalabras("Hola   mundo  hoy"));
+        //assertEquals(4, tester.contarPalabras("Hola   mundo  hoy")); test fallido
+        assertEquals(3, tester.contarPalabras("Hola   mundo  hoy")); //test corregido
     }
 
     // Test para el método convertirAMayusculas
@@ -340,6 +346,8 @@ public class WorkshopTest {
     // Test para el método jugarPiedraPapelTijeraLagartoSpock
     @Test
     public void testJugarPiedraPapelTijeraLagartoSpock() {
+
+        /*
         // Test 1: Elección del usuario es Piedra
         // Se debe ajustar el resultado dependiendo de la elección aleatoria de la computadora
         assertTrue(tester.jugarPiedraPapelTijeraLagartoSpock("Piedra").equals("Ganaste") ||
@@ -349,6 +357,21 @@ public class WorkshopTest {
         assertTrue(tester.jugarPiedraPapelTijeraLagartoSpock("Papel").equals("Ganaste") ||
                 tester.jugarPiedraPapelTijeraLagartoSpock("Papel").equals("Perdiste") ||
                 tester.jugarPiedraPapelTijeraLagartoSpock("Papel").equals("Empate"));
+        */
+         //LA LOGICA DEL METODO DA FALLOS EN OCASIONES PORQUE ESPERA UN ORDEN ESPECIFICO DE LOS RESULTADOS, SI EN
+        // LA PRIMERA NO GANA, EN LA SEGUNDA NO PIERDE Y EN LA ULTIMA NO EMPATA DA ERROR POR LO QUE SE CORRIJIO PARA
+        // QUE EL RESULTADO SEA EL MISMO SIN IMPORTAR EL ORDEN
+        // Test 1: Piedra
+        String resultado1 = tester.jugarPiedraPapelTijeraLagartoSpock("Piedra");
+        assertTrue(resultado1.equals("Ganaste") ||
+                resultado1.equals("Perdiste") ||
+                resultado1.equals("Empate"));
+
+        // Test 2: Papel
+        String resultado2 = tester.jugarPiedraPapelTijeraLagartoSpock("Papel");
+        assertTrue(resultado2.equals("Ganaste") ||
+                resultado2.equals("Perdiste") ||
+                resultado2.equals("Empate"));
            }
 
 
